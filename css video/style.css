@@ -1,0 +1,141 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ 
+
+/* || GENERAL STYLES */
+
+body{
+    font: var(--FS) var(--FF);
+    min-height: 100vh;
+    background-image: url(img/nio2.jpeg);
+    background-position: absolute;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+}
+
+/* || VARIABLES */
+:root{
+    /* || FONT */
+    --FF: "times new roman", arial;
+    --FS:1.5rem;
+    --FS-XL:3rem;
+    
+    /* || COLOR */
+    --BGCOLOR: #475569;
+    --ALT-COLOR:#050f1d;
+    --RADIAL-COLOR:whitesmoke;
+    --LIGHT-COLOR:whitesmoke;
+    --DARK-COLOR:#000;
+    
+    /* || GENERAL */
+    --PADDING:0.5em, 1.5em;
+    --SHADOWS: 0, 6px, 5px, -5px, var(--DARK-COLOR);
+    --BORDERS:2px solid var(--DARK-COLOR) ;
+
+    /* || SQUARE */
+    --SQUARE-BGCOLOR:papayawhip;
+    --SQUARE-SIZE:max(150px, 20vw);
+}
+
+@media (prefers-color-scheme: light) {
+    :root{
+        --BGCOLOR:#000;
+        --ALT-BGCOLOR:#333;
+        --RADIAL-COLOR: rgb(217, 217, 217);
+        --SQUARE-BGCOLOR:rgb(163, 49, 163);
+    }
+}
+
+header, .nav, footer{
+    display: grid;
+    place-content: center;
+    grid-template-columns: 100%;
+}
+
+header{
+    color: beige;
+    background-color: var(--ALT-COLOR);
+    text-align: center;
+    width: 100%;
+    min-height: 120px;
+    position: sticky;
+    top: 0;
+    font-size: 50px;
+}
+
+
+.nav{
+    background-color:var(--LIGHT-COLOR);
+    font-weight: 600;
+    font-size: 50px;
+    color: var(--DARK-COLOR);
+    width: 100%;
+    min-height:60px ;
+    text-align: center;
+    box-shadow: var(--SHADOWS);
+    border-bottom: var(--BORDERS) ;
+}
+
+
+main{
+    font-weight: 800;
+    grid-template-columns: repeat(4, minmax(150px,200px));
+    display: grid;
+    padding: var(--PADDING);
+    justify-content:space-evenly ;
+    align-items: center;
+    flex-flow: row nowrap;
+    column-gap: min(3vw, 30px);
+    row-gap: min(3vw, 30px);
+    font-size: 35px;
+    flex-grow: 1;
+    
+}
+
+/* || FEATURES */
+
+.square--highlight{
+    --SQUARE-BGCOLOR:blue;
+}
+
+.square{
+    background-color: var(--SQUARE-BGCOLOR);
+   /* width: var(--SQUARE-SIZE);
+    height: var(--SQUARE-SIZE);*/ 
+
+    border: var(--BORDERS);
+    display: grid;
+    border-radius: 30%;
+    place-content: center;
+    font-size: var(--FS-XL);
+    box-shadow: var(--SHADOWS);
+}
+
+
+footer{
+    background-color: var(--ALT-COLOR);
+    font-weight: 400;
+    font-size: 40px;
+    color: antiquewhite;
+    width: 100%;
+    height:40px ;
+    text-align: center;
+    position: sticky;
+    bottom: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
